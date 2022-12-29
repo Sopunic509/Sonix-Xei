@@ -23,7 +23,7 @@ class GalleryState extends MusicBeatState
 	var options:Array<String> = [];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
-	private var achievementIndex:Array<Int> = [];
+
 	private var descText:FlxText;
 	private var artistText:FlxText;
 	var txtbg:FlxSprite;
@@ -214,22 +214,7 @@ class GalleryState extends MusicBeatState
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
 
-		for (i in 0...options.length) {
-			var achieveName:String = Achievements.achievementsStuff[achievementIndex[i]][2];
-			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210, Achievements.isAchievementUnlocked(achieveName) ? Achievements.achievementsStuff[achievementIndex[i]][0] : '?', false, false);
-			optionText.isMenuItem = true;
-			optionText.x += 280;
-			optionText.xAdd = 200;
-			optionText.targetY = i;
-			grpOptions.add(optionText);
 
-		}
-
-		descText = new FlxText(150, 650, 980, "", 32);
-		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		descText.scrollFactor.set();
-		descText.borderSize = 2.4;
-		add(descText);
 		changeSelection();
 
 		artistText = new FlxText(150, 50, 980, "", 32);
@@ -238,6 +223,10 @@ class GalleryState extends MusicBeatState
 		artistText.screenCenter(X);
 		artistText.borderSize = 2.4;
 		add(artistText);
+		
+		#if mobileC
+		addVirtualPad(LEFT_RIGHT, B);
+		#end
 
 		super.create();
 	}
@@ -432,7 +421,7 @@ class GalleryState extends MusicBeatState
 			}
 		}
 
-		descText.text = Achievements.achievementsStuff[achievementIndex[curSelected]][1];
+
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 	}
 	#end
