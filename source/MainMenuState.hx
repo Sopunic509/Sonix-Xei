@@ -49,18 +49,13 @@ class MainMenuState extends MusicBeatState
 	var char:FlxSprite;
 	var arrows:FlxSprite;
 	var camFollow:FlxObject;
-	var camFollowPos:FlxObject;
-	var debugKeys:Array<FlxKey>;
 
 	override function create()
 	{
-		WeekData.loadTheFirstEnabledMod();
-
 		#if desktop
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
-		debugKeys = ClientPrefs.copyKey(ClientPrefs.keyBinds.get('debug_1'));
 
 		camGame = new FlxCamera();
 		camAchievement = new FlxCamera();
@@ -85,9 +80,8 @@ class MainMenuState extends MusicBeatState
 		add(bg);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
-		camFollowPos = new FlxObject(0, 0, 1, 1);
+
 		add(camFollow);
-		add(camFollowPos);
 
 		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
 		magenta.scrollFactor.set(xScroll, 0);
@@ -175,10 +169,10 @@ class MainMenuState extends MusicBeatState
 		// NG.core.calls.event.logEvent('swag').send();
 
 		changeItem();
-		
-		#if mobileC
-        addVirtualPad(LEFT_RIGHT, A_B);
-        #end
+
+		#if android
+		addVirtualPad(LEFT_RIGHT, A_B);
+		#end
 
 		super.create();
 	}
@@ -193,7 +187,6 @@ class MainMenuState extends MusicBeatState
 		}
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
-		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
 		if (!selectedSomethin)
 		{
@@ -243,25 +236,22 @@ class MainMenuState extends MusicBeatState
 										MusicBeatState.switchState(new FreeplayState());
 									case 'characters':
 										MusicBeatState.switchState(new CharactersState());
-									case 'awards':
-										MusicBeatState.switchState(new AchievementsMenuState());
 									case 'gallery':
 										MusicBeatState.switchState(new GalleryState());
 									case 'options':
-										LoadingState.loadAndSwitchState(new options.OptionsState());
-								}
+
+MusicBeatState.switchState(new OptionsState());
+								}										
 							});
 						}
 					});
 				}
 			}
-			#if desktop
-			else if (FlxG.keys.anyJustPressed(debugKeys))
+			else if (FlxG.keys.justPressed.SEVEN #if mobileC || _virtualpad.buttonC.justPressed #end)
 			{
 				selectedSomethin = true;
 				MusicBeatState.switchState(new MasterEditorMenu());
 			}
-			#end
 		}
 
 		super.update(elapsed);
