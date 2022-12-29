@@ -19,7 +19,7 @@ using StringTools;
 
 class GalleryState extends MusicBeatState
 {
-	#if aurnsp_ALLOWED
+	#if ACHIEVEMENTS_ALLOWED
 	var options:Array<String> = [];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
@@ -219,13 +219,14 @@ class GalleryState extends MusicBeatState
 		descText.borderSize = 2.4;
 		add(descText);
 		changeSelection();
-
 		artistText = new FlxText(150, 50, 980, "", 32);
 		artistText.setFormat(Paths.font("vcr.ttf"), 46, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		artistText.scrollFactor.set();
 		artistText.screenCenter(X);
 		artistText.borderSize = 2.4;
 		add(artistText);
+		
+		changeSelection();
 
 		#if android
 		addVirtualPad(LEFT_RIGHT, B);
