@@ -172,9 +172,7 @@ class CharactersState extends MusicBeatState
 		add(grpOptions);
 
 		for (i in 0...options.length) {
-var achieveName:String = Achievements.achievementsStuff[achievementIndex[i]][2];
-			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210, Achievements.isAchievementUnlocked(achieveName) ? Achievements.achievementsStuff[achievementIndex[i]][0] : '?', false, false);
-			
+			var optionText:Alphabet = new Alphabet(0, 70 * i, options.length[i][0], !isSelectable, false);
 			optionText.isMenuItem = true;
 			optionText.x += 280;
 			optionText.xAdd = 200;
