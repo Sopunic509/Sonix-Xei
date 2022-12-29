@@ -24,7 +24,6 @@ class CharactersState extends MusicBeatState
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	private static var exeversion:Int = 0;
-	private var achievementIndex:Array<Int> = [];
 	private var descText:FlxText;
 	private var topText:FlxText;
 	private var pose:FlxText;
