@@ -224,7 +224,7 @@ class GalleryState extends MusicBeatState
 		artistText.borderSize = 2.4;
 		add(artistText);
 		
-		#if mobileC
+		#if android
 		addVirtualPad(LEFT_RIGHT, B);
 		#end
 

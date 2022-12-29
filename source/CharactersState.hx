@@ -190,11 +190,11 @@ class CharactersState extends MusicBeatState
 		add(topText);
 
 		changeSelection();
-		
-		#if mobileC
+
+		#if android
 		addVirtualPad(UP_DOWN, B);
 		#end
-
+		
 		super.create();
 	}
 
