@@ -19,12 +19,12 @@ using StringTools;
 
 class GalleryState extends MusicBeatState
 {
-	#if ACHIEVEMENTS_ALLOWED
+	#if aurnsp_ALLOWED
 	var options:Array<String> = [];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
-	private var so:Array<Int> = [];
-	private var artistText:FlxText;
+	private var sonicexetxt:Array<Int> = [];
+	private var descText:FlxText;
 	private var artistText:FlxText;
 	var txtbg:FlxSprite;
 
@@ -214,12 +214,9 @@ class GalleryState extends MusicBeatState
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
 
-
-		changeSelection();
-	
 		for (i in 0...options.length) {
-			var achieveName:String = Achievements.achievementsStuff[so[i]][2];
-			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210, Achievements.isAchievementUnlocked(achieveName) ? Achievements.achievementsStuff[so[i]][0] : '?', false, false);
+			var nochra:String = aurnsp.sonix[sonicexetxt[i]][2];
+			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210, aurnsp.ece(nochra) ? aurnsp.sonix[sonicexetxt[i]][0] : '?', false, false);
 			optionText.isMenuItem = true;
 			optionText.x += 280;
 			optionText.xAdd = 200;
@@ -228,17 +225,24 @@ class GalleryState extends MusicBeatState
 
 		}
 
+		descText = new FlxText(150, 650, 980, "", 32);
+		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		descText.scrollFactor.set();
+		descText.borderSize = 2.4;
+		add(descText);
+		changeSelection();
+
 		artistText = new FlxText(150, 50, 980, "", 32);
 		artistText.setFormat(Paths.font("vcr.ttf"), 46, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		artistText.scrollFactor.set();
 		artistText.screenCenter(X);
 		artistText.borderSize = 2.4;
 		add(artistText);
-		
+
 		#if android
 		addVirtualPad(LEFT_RIGHT, B);
 		#end
-
+		
 		super.create();
 	}
 
@@ -264,7 +268,7 @@ class GalleryState extends MusicBeatState
 			FlxTween.tween(sprite23, { x: 1500}, 0.01);
 			FlxTween.tween(sprite8, { x: 1500}, 0.01);
 			artistText.text = "Made by : Explo";
-			artistText.text = "Epic Collab";
+			descText.text = "Epic Collab";
 			if (controls.UI_LEFT_P) {
 				curSelected = 12;
 			}
@@ -274,139 +278,139 @@ class GalleryState extends MusicBeatState
 			FlxTween.tween(sprite2, { x: -350}, 0.5);
 			FlxTween.tween(sprite3, { x: 1500}, 0.5);
 			artistText.text = "Made by : Yaboijak";
-			artistText.text = "Not Too Late";
+			descText.text = "Not Too Late";
 		}
 		if (curSelected == 2){
 			FlxTween.tween(sprite2, { x: 1500}, 0.5);
 			FlxTween.tween(sprite3, { x: 150}, 0.5);
 			FlxTween.tween(sprite4, { x: 1500}, 0.5);
 			artistText.text = "Made by : Explo";
-			artistText.text = "Old Thumbnail";
+			descText.text = "Old Thumbnail";
 		}
 		if (curSelected == 3){
 			FlxTween.tween(sprite3, { x: 1500}, 0.5);
 			FlxTween.tween(sprite4, { x: 450}, 0.5);
 			FlxTween.tween(sprite5, { x: 1500}, 0.5);
 			artistText.text = "Made by : The Reda Show";
-			artistText.text = "When The Knuckles Is Sus !!??";
+			descText.text = "When The Knuckles Is Sus !!??";
 		}
 		if (curSelected == 4){
 			FlxTween.tween(sprite4, { x: 1500}, 0.5);
 			FlxTween.tween(sprite5, { x: -800}, 0.5);
 			FlxTween.tween(sprite6, { x: 1500}, 0.5);
 			artistText.text = "Made by : NeonZeneration";
-			artistText.text = "Old Knuckles.Exe";
+			descText.text = "Old Knuckles.Exe";
 		}
 		if (curSelected == 5){
 			FlxTween.tween(sprite5, { x: 1500}, 0.5);
 			FlxTween.tween(sprite6, { x: -100}, 0.5);
 			FlxTween.tween(sprite7, { x: 1500}, 0.5);
 			artistText.text = " ";
-			artistText.text = "Fly-Away Concept";
+			descText.text = "Fly-Away Concept";
 		}
 		if (curSelected == 6){
 			FlxTween.tween(sprite6, { x: 1500}, 0.5);
 			FlxTween.tween(sprite7, { x: -150}, 0.5);
 			FlxTween.tween(sprite8, { x: 1500}, 0.5);
 			artistText.text = "Made by : The Reda Show";
-			artistText.text = "IRL SMV5 ???";
+			descText.text = "IRL SMV5 ???";
 		}
 		if (curSelected == 7){
 			FlxTween.tween(sprite7, { x: 1500}, 0.5);
 			FlxTween.tween(sprite8, { x: 250}, 0.5);
 			FlxTween.tween(sprite9, { x: 1500}, 0.5);
 			artistText.text = "Made by : Casanova";
-			artistText.text = "Cream.Exe teaser";
+			descText.text = "Cream.Exe teaser";
 		}
 		if (curSelected == 8){
 			FlxTween.tween(sprite8, { x: 1500}, 0.5);
 			FlxTween.tween(sprite9, { x: 300}, 0.5);
 			FlxTween.tween(sprite10, { x: 1500}, 0.5);
 			artistText.text = " ";
-			artistText.text = "Tails.Exe prototype";
+			descText.text = "Tails.Exe prototype";
 		}
 		if (curSelected == 9){
 			FlxTween.tween(sprite9, { x: 1500}, 0.5);
 			FlxTween.tween(sprite10, { x: -250}, 0.5);
 			FlxTween.tween(sprite11, { x: 1500}, 0.5);
 			artistText.text = " ";
-			artistText.text = "Amy prototype";
+			descText.text = "Amy prototype";
 		}
 		if (curSelected == 10){
 			FlxTween.tween(sprite10, { x: 1500}, 0.5);
 			FlxTween.tween(sprite11, { x: 300}, 0.5);
 			FlxTween.tween(sprite12, { x: 1500}, 0.5);
 			artistText.text = " ";
-			artistText.text = "Sally Beta";
+			descText.text = "Sally Beta";
 		}
 		if (curSelected == 11){
 			FlxTween.tween(sprite11, { x: 1500}, 0.5);
 			FlxTween.tween(sprite12, { x: 0}, 0.5);
 			FlxTween.tween(sprite13, { x: 1500}, 0.5);
 			artistText.text = "Made by : Toxxen Z";
-			artistText.text = "Volcano Valley ????";
+			descText.text = "Volcano Valley ????";
 		}
 		if (curSelected == 12){
 			FlxTween.tween(sprite12, { x: 1500}, 0.5);
 			FlxTween.tween(sprite13, { x: 500}, 0.5);
 			FlxTween.tween(sprite14, { x: 1500}, 0.5); 
 			artistText.text = "Made by : Explo";
-			artistText.text = "SMV5 when he see a new fnf drama";
+			descText.text = "SMV5 when he see a new fnf drama";
 		}
 		if (curSelected == 13){
 			FlxTween.tween(sprite13, { x: 1500}, 0.5);
 			FlxTween.tween(sprite14, { x: 500}, 0.5);
 			FlxTween.tween(sprite15, { x: 1500}, 0.5);
 			artistText.text = "Made by : Junin";
-			artistText.text = "Yo wanna play Wii ?";
+			descText.text = "Yo wanna play Wii ?";
 		}
 		if (curSelected == 14){
 			FlxTween.tween(sprite14, { x: 1500}, 0.5);
 			FlxTween.tween(sprite15, { x: 0}, 0.5);
 			FlxTween.tween(sprite16, { x: 1500}, 0.5);
 			artistText.text = "Made by : Junin";
-			artistText.text = "Place order logo";
+			descText.text = "Place order logo";
 		}
 		if (curSelected == 15){
 			FlxTween.tween(sprite15, { x: 1500}, 0.5);
 			FlxTween.tween(sprite16, { x: 300}, 0.5);
 			FlxTween.tween(sprite18, { x: 1500}, 0.5);
 			artistText.text = "Made by : .me8udonik.";
-			artistText.text = "Thx for 200 followers !!";
+			descText.text = "Thx for 200 followers !!";
 		}
 		if (curSelected == 16){
 			FlxTween.tween(sprite16, { x: 1500}, 0.5);
 			FlxTween.tween(sprite18, { x: 0}, 0.5);
 			FlxTween.tween(sprite20, { x: 1500}, 0.5);
 			artistText.text = "Made by : Explo";
-			artistText.text = "Mobian Bf Exe";
+			descText.text = "Mobian Bf Exe";
 		}
 		if (curSelected == 17){
 			FlxTween.tween(sprite18, { x: 1500}, 0.5);
 			FlxTween.tween(sprite20, { x: 0}, 0.5);
 			FlxTween.tween(sprite21, { x: 1500}, 0.5);
 			artistText.text = "Made by : Explo";
-			artistText.text = "Good bye XENOPHANES";
+			descText.text = "Good bye XENOPHANES";
 		}
 		if (curSelected == 18){
 			FlxTween.tween(sprite20, { x: 1500}, 0.5);
 			FlxTween.tween(sprite21, { x: 0}, 0.5);
 			FlxTween.tween(sprite22, { x: 1500}, 0.5);
 			artistText.text = "Made by : MoonyExclipsy";
-			artistText.text = "Exeller version sexy";
+			descText.text = "Exeller version sexy";
 		}
 		if (curSelected == 19){
 			FlxTween.tween(sprite21, { x: 1500}, 0.5);
 			FlxTween.tween(sprite22, { x: 400}, 0.5);
 			FlxTween.tween(sprite23, { x: 1500}, 0.5);
 			artistText.text = "Made by : Kyleig";
-			artistText.text = "Yo, wanna sex ?";
+			descText.text = "Yo, wanna sex ?";
 		}
 		if (curSelected == 20){
 			FlxTween.tween(sprite22, { x: 1500}, 0.5);
 			FlxTween.tween(sprite23, { x: 200}, 0.5);
 			artistText.text = "Made by : FleetwayMoon";
-			artistText.text = "Wanna play Uno ?";
+			descText.text = "Wanna play Uno ?";
 		}
 		if (curSelected == 21){
 			curSelected = 0;
@@ -432,7 +436,7 @@ class GalleryState extends MusicBeatState
 			}
 		}
 
-
+		descText.text = aurnsp.sonix[sonicexetxt[curSelected]][1];
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 	}
 	#end
