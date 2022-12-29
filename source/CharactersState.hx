@@ -180,7 +180,8 @@ class CharactersState extends MusicBeatState
 			optionText.xAdd = 200;
 			optionText.targetY = i;
 			grpOptions.add(optionText);
-		{
+			
+		}
 			    
 		descText = new FlxText(0, 0, 980, "", 16);
 		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
