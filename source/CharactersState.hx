@@ -24,6 +24,7 @@ class CharactersState extends MusicBeatState
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	private static var exeversion:Int = 0;
+	private var achievementIndex:Array<Int> = [];
 	private var descText:FlxText;
 	private var topText:FlxText;
 	private var pose:FlxText;
@@ -171,7 +172,7 @@ class CharactersState extends MusicBeatState
 		add(grpOptions);
 
 		for (i in 0...options.length) {
-			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210);
+			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210, Achievements.isAchievementUnlocked(achieveName) ? Achievements.achievementsStuff[achievementIndex[i]][0] : '?', false, false);
 			optionText.isMenuItem = true;
 			optionText.x += 280;
 			optionText.xAdd = 200;
