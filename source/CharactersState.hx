@@ -171,16 +171,17 @@ class CharactersState extends MusicBeatState
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
 
+
 		for (i in 0...options.length) {
-			var optionText:Alphabet = new Alphabet(0, 70 * i, options.length[i][0], !isSelectable, false);
+			var achieveName:String = Achievements.achievementsStuff[achievementIndex[i]][2];
+			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210, Achievements.isAchievementUnlocked(achieveName) ? Achievements.achievementsStuff[achievementIndex[i]][0] : '?', false, false);
 			optionText.isMenuItem = true;
 			optionText.x += 280;
 			optionText.xAdd = 200;
 			optionText.targetY = i;
 			grpOptions.add(optionText);
-
-		}
-
+		{
+			    
 		descText = new FlxText(0, 0, 980, "", 16);
 		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		descText.scrollFactor.set();
