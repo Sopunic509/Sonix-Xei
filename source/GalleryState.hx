@@ -23,7 +23,6 @@ class GalleryState extends MusicBeatState
 	var options:Array<String> = [];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
-	private var sonicexetxt:Array<Int> = [];
 	private var descText:FlxText;
 	private var artistText:FlxText;
 	var txtbg:FlxSprite;
@@ -213,17 +212,6 @@ class GalleryState extends MusicBeatState
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
-
-		for (i in 0...options.length) {
-			var nochra:String = aurnsp.sonix[sonicexetxt[i]][2];
-			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210, aurnsp.ece(nochra) ? aurnsp.sonix[sonicexetxt[i]][0] : '?', false, false);
-			optionText.isMenuItem = true;
-			optionText.x += 280;
-			optionText.xAdd = 200;
-			optionText.targetY = i;
-			grpOptions.add(optionText);
-
-		}
 
 		descText = new FlxText(150, 650, 980, "", 32);
 		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -435,8 +423,7 @@ class GalleryState extends MusicBeatState
 				item.alpha = 1;
 			}
 		}
-
-		descText.text = aurnsp.sonix[sonicexetxt[curSelected]][1];
+		
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 	}
 	#end
