@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="menu_gallery.png">
+	<!-- Created with Adobe Animate version 20.5.0.29329 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gallery white0000" x="0" y="0" width="564" height="165" frameX="150" frameY="50" frameWidth="566" frameHeight="175"/>
+	<SubTexture name="gallery white0001" x="0" y="0" width="564" height="165" frameX="150" frameY="55" frameWidth="566" frameHeight="175"/>
+	<SubTexture name="gallery white0002" x="0" y="165" width="566" height="174" frameX="150" frameY="55" frameWidth="566" frameHeight="175"/>
+	<SubTexture name="gallery white0003" x="0" y="165" width="566" height="174" frameX="150" frameY="55" frameWidth="566" frameHeight="175"/>
+	<SubTexture name="gallery white0004" x="0" y="339" width="558" height="173" frameX="143" frameY="56" frameWidth="566" frameHeight="175"/>
+	<SubTexture name="gallery white0005" x="0" y="339" width="558" height="173" frameX="143" frameY="56" frameWidth="566" frameHeight="175"/>
+</TextureAtlas>
