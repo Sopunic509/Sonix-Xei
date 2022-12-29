@@ -23,8 +23,8 @@ class GalleryState extends MusicBeatState
 	var options:Array<String> = [];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
-
-	private var descText:FlxText;
+	private var so:Array<Int> = [];
+	private var artistText:FlxText;
 	private var artistText:FlxText;
 	var txtbg:FlxSprite;
 
@@ -216,6 +216,17 @@ class GalleryState extends MusicBeatState
 
 
 		changeSelection();
+	
+		for (i in 0...options.length) {
+			var achieveName:String = Achievements.achievementsStuff[so[i]][2];
+			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210, Achievements.isAchievementUnlocked(achieveName) ? Achievements.achievementsStuff[so[i]][0] : '?', false, false);
+			optionText.isMenuItem = true;
+			optionText.x += 280;
+			optionText.xAdd = 200;
+			optionText.targetY = i;
+			grpOptions.add(optionText);
+
+		}
 
 		artistText = new FlxText(150, 50, 980, "", 32);
 		artistText.setFormat(Paths.font("vcr.ttf"), 46, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -253,7 +264,7 @@ class GalleryState extends MusicBeatState
 			FlxTween.tween(sprite23, { x: 1500}, 0.01);
 			FlxTween.tween(sprite8, { x: 1500}, 0.01);
 			artistText.text = "Made by : Explo";
-			descText.text = "Epic Collab";
+			artistText.text = "Epic Collab";
 			if (controls.UI_LEFT_P) {
 				curSelected = 12;
 			}
@@ -263,139 +274,139 @@ class GalleryState extends MusicBeatState
 			FlxTween.tween(sprite2, { x: -350}, 0.5);
 			FlxTween.tween(sprite3, { x: 1500}, 0.5);
 			artistText.text = "Made by : Yaboijak";
-			descText.text = "Not Too Late";
+			artistText.text = "Not Too Late";
 		}
 		if (curSelected == 2){
 			FlxTween.tween(sprite2, { x: 1500}, 0.5);
 			FlxTween.tween(sprite3, { x: 150}, 0.5);
 			FlxTween.tween(sprite4, { x: 1500}, 0.5);
 			artistText.text = "Made by : Explo";
-			descText.text = "Old Thumbnail";
+			artistText.text = "Old Thumbnail";
 		}
 		if (curSelected == 3){
 			FlxTween.tween(sprite3, { x: 1500}, 0.5);
 			FlxTween.tween(sprite4, { x: 450}, 0.5);
 			FlxTween.tween(sprite5, { x: 1500}, 0.5);
 			artistText.text = "Made by : The Reda Show";
-			descText.text = "When The Knuckles Is Sus !!??";
+			artistText.text = "When The Knuckles Is Sus !!??";
 		}
 		if (curSelected == 4){
 			FlxTween.tween(sprite4, { x: 1500}, 0.5);
 			FlxTween.tween(sprite5, { x: -800}, 0.5);
 			FlxTween.tween(sprite6, { x: 1500}, 0.5);
 			artistText.text = "Made by : NeonZeneration";
-			descText.text = "Old Knuckles.Exe";
+			artistText.text = "Old Knuckles.Exe";
 		}
 		if (curSelected == 5){
 			FlxTween.tween(sprite5, { x: 1500}, 0.5);
 			FlxTween.tween(sprite6, { x: -100}, 0.5);
 			FlxTween.tween(sprite7, { x: 1500}, 0.5);
 			artistText.text = " ";
-			descText.text = "Fly-Away Concept";
+			artistText.text = "Fly-Away Concept";
 		}
 		if (curSelected == 6){
 			FlxTween.tween(sprite6, { x: 1500}, 0.5);
 			FlxTween.tween(sprite7, { x: -150}, 0.5);
 			FlxTween.tween(sprite8, { x: 1500}, 0.5);
 			artistText.text = "Made by : The Reda Show";
-			descText.text = "IRL SMV5 ???";
+			artistText.text = "IRL SMV5 ???";
 		}
 		if (curSelected == 7){
 			FlxTween.tween(sprite7, { x: 1500}, 0.5);
 			FlxTween.tween(sprite8, { x: 250}, 0.5);
 			FlxTween.tween(sprite9, { x: 1500}, 0.5);
 			artistText.text = "Made by : Casanova";
-			descText.text = "Cream.Exe teaser";
+			artistText.text = "Cream.Exe teaser";
 		}
 		if (curSelected == 8){
 			FlxTween.tween(sprite8, { x: 1500}, 0.5);
 			FlxTween.tween(sprite9, { x: 300}, 0.5);
 			FlxTween.tween(sprite10, { x: 1500}, 0.5);
 			artistText.text = " ";
-			descText.text = "Tails.Exe prototype";
+			artistText.text = "Tails.Exe prototype";
 		}
 		if (curSelected == 9){
 			FlxTween.tween(sprite9, { x: 1500}, 0.5);
 			FlxTween.tween(sprite10, { x: -250}, 0.5);
 			FlxTween.tween(sprite11, { x: 1500}, 0.5);
 			artistText.text = " ";
-			descText.text = "Amy prototype";
+			artistText.text = "Amy prototype";
 		}
 		if (curSelected == 10){
 			FlxTween.tween(sprite10, { x: 1500}, 0.5);
 			FlxTween.tween(sprite11, { x: 300}, 0.5);
 			FlxTween.tween(sprite12, { x: 1500}, 0.5);
 			artistText.text = " ";
-			descText.text = "Sally Beta";
+			artistText.text = "Sally Beta";
 		}
 		if (curSelected == 11){
 			FlxTween.tween(sprite11, { x: 1500}, 0.5);
 			FlxTween.tween(sprite12, { x: 0}, 0.5);
 			FlxTween.tween(sprite13, { x: 1500}, 0.5);
 			artistText.text = "Made by : Toxxen Z";
-			descText.text = "Volcano Valley ????";
+			artistText.text = "Volcano Valley ????";
 		}
 		if (curSelected == 12){
 			FlxTween.tween(sprite12, { x: 1500}, 0.5);
 			FlxTween.tween(sprite13, { x: 500}, 0.5);
 			FlxTween.tween(sprite14, { x: 1500}, 0.5); 
 			artistText.text = "Made by : Explo";
-			descText.text = "SMV5 when he see a new fnf drama";
+			artistText.text = "SMV5 when he see a new fnf drama";
 		}
 		if (curSelected == 13){
 			FlxTween.tween(sprite13, { x: 1500}, 0.5);
 			FlxTween.tween(sprite14, { x: 500}, 0.5);
 			FlxTween.tween(sprite15, { x: 1500}, 0.5);
 			artistText.text = "Made by : Junin";
-			descText.text = "Yo wanna play Wii ?";
+			artistText.text = "Yo wanna play Wii ?";
 		}
 		if (curSelected == 14){
 			FlxTween.tween(sprite14, { x: 1500}, 0.5);
 			FlxTween.tween(sprite15, { x: 0}, 0.5);
 			FlxTween.tween(sprite16, { x: 1500}, 0.5);
 			artistText.text = "Made by : Junin";
-			descText.text = "Place order logo";
+			artistText.text = "Place order logo";
 		}
 		if (curSelected == 15){
 			FlxTween.tween(sprite15, { x: 1500}, 0.5);
 			FlxTween.tween(sprite16, { x: 300}, 0.5);
 			FlxTween.tween(sprite18, { x: 1500}, 0.5);
 			artistText.text = "Made by : .me8udonik.";
-			descText.text = "Thx for 200 followers !!";
+			artistText.text = "Thx for 200 followers !!";
 		}
 		if (curSelected == 16){
 			FlxTween.tween(sprite16, { x: 1500}, 0.5);
 			FlxTween.tween(sprite18, { x: 0}, 0.5);
 			FlxTween.tween(sprite20, { x: 1500}, 0.5);
 			artistText.text = "Made by : Explo";
-			descText.text = "Mobian Bf Exe";
+			artistText.text = "Mobian Bf Exe";
 		}
 		if (curSelected == 17){
 			FlxTween.tween(sprite18, { x: 1500}, 0.5);
 			FlxTween.tween(sprite20, { x: 0}, 0.5);
 			FlxTween.tween(sprite21, { x: 1500}, 0.5);
 			artistText.text = "Made by : Explo";
-			descText.text = "Good bye XENOPHANES";
+			artistText.text = "Good bye XENOPHANES";
 		}
 		if (curSelected == 18){
 			FlxTween.tween(sprite20, { x: 1500}, 0.5);
 			FlxTween.tween(sprite21, { x: 0}, 0.5);
 			FlxTween.tween(sprite22, { x: 1500}, 0.5);
 			artistText.text = "Made by : MoonyExclipsy";
-			descText.text = "Exeller version sexy";
+			artistText.text = "Exeller version sexy";
 		}
 		if (curSelected == 19){
 			FlxTween.tween(sprite21, { x: 1500}, 0.5);
 			FlxTween.tween(sprite22, { x: 400}, 0.5);
 			FlxTween.tween(sprite23, { x: 1500}, 0.5);
 			artistText.text = "Made by : Kyleig";
-			descText.text = "Yo, wanna sex ?";
+			artistText.text = "Yo, wanna sex ?";
 		}
 		if (curSelected == 20){
 			FlxTween.tween(sprite22, { x: 1500}, 0.5);
 			FlxTween.tween(sprite23, { x: 200}, 0.5);
 			artistText.text = "Made by : FleetwayMoon";
-			descText.text = "Wanna play Uno ?";
+			artistText.text = "Wanna play Uno ?";
 		}
 		if (curSelected == 21){
 			curSelected = 0;
