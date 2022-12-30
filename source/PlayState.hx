@@ -270,6 +270,8 @@ class PlayState extends MusicBeatState
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
+	
+	var watermark:FlxText;
 
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
@@ -1133,6 +1135,14 @@ class PlayState extends MusicBeatState
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
+		
+		watermark = new FlxText(scoreTxt.x + 30, scoreTxt.y, 0, "PORT BY SOPUNIC508" + MainMenuState.psychEngineVersion, 20);
+		watermark.scrollFactor.set();
+		watermark.borderSize = 1.25;
+		watermark.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		watermark.visible = !ClientPrefs.hideHud;
+		add(watermark);
+
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -1156,6 +1166,7 @@ class PlayState extends MusicBeatState
 		timeBar.cameras = [camHUD];
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
+		watermark.cameras = [camHUD];
 		doof.cameras = [camHUD];
 		
                 #if android
