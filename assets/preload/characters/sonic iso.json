@@ -5,74 +5,74 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "idle"
 		},
 		{
 			"offsets": [
-				-11,
-				-1
+				-37,
+				-65
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "right"
 		},
 		{
 			"offsets": [
-				71,
-				10
+				204,
+				-60
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "left"
 		},
 		{
 			"offsets": [
-				3,
-				-156
+				131,
+				-270
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "down"
 		},
 		{
 			"offsets": [
-				57,
-				35
+				77,
+				172
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "up"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/knuckles",
+	"image": "characters/sonic iso",
 	"position": [
-		-50,
+		-20,
 		40
 	],
-	"healthicon": "knuckles",
+	"healthicon": "iso",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		51,
-		0
+		61,
+		58,
+		157
 	],
 	"camera_position": [
-		190,
-		50
+		140,
+		60
 	],
 	"sing_duration": 6.1,
-	"scale": 0.6
+	"scale": 1.1
 }

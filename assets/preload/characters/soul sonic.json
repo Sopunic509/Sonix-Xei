@@ -2,76 +2,76 @@
 	"animations": [
 		{
 			"offsets": [
-				0,
-				0
+				-258,
+				-93
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "idle"
 		},
 		{
 			"offsets": [
-				-11,
-				-1
+				-226,
+				-101
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "right"
 		},
 		{
 			"offsets": [
-				71,
-				10
+				-267,
+				-97
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "left"
 		},
 		{
 			"offsets": [
-				3,
-				-156
+				-175,
+				-113
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "down"
 		},
 		{
 			"offsets": [
-				57,
-				35
+				-169,
+				-30
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "up"
 		}
 	],
-	"no_antialiasing": false,
-	"image": "characters/knuckles",
+	"no_antialiasing": true,
+	"image": "characters/soul sonic",
 	"position": [
 		-50,
 		40
 	],
-	"healthicon": "knuckles",
+	"healthicon": "soul-sonic",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		51,
-		0
+		153,
+		153,
+		153
 	],
 	"camera_position": [
-		190,
-		50
+		510,
+		70
 	],
 	"sing_duration": 6.1,
 	"scale": 0.6

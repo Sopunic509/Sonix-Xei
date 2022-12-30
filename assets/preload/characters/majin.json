@@ -2,77 +2,77 @@
 	"animations": [
 		{
 			"offsets": [
-				0,
-				0
+				31,
+				-26
 			],
-			"indices": [],
-			"fps": 24,
-			"anim": "idle",
 			"loop": false,
-			"name": "idle"
-		},
-		{
-			"offsets": [
-				-11,
-				-1
-			],
-			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "right"
 		},
 		{
 			"offsets": [
-				71,
-				10
+				432,
+				-48
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "left"
 		},
 		{
 			"offsets": [
-				3,
-				-156
+				7,
+				-123
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "down"
 		},
 		{
 			"offsets": [
-				57,
-				35
+				128,
+				45
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				174,
+				-30
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/knuckles",
+	"image": "characters/majin",
 	"position": [
-		-50,
-		40
-	],
-	"healthicon": "knuckles",
-	"flip_x": false,
-	"healthbar_colors": [
-		255,
-		51,
-		0
-	],
-	"camera_position": [
-		190,
+		40,
 		50
 	],
+	"healthicon": "majin",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		255
+	],
+	"camera_position": [
+		150,
+		-20
+	],
 	"sing_duration": 6.1,
-	"scale": 0.6
+	"scale": 1
 }

@@ -5,74 +5,74 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "idle"
 		},
 		{
 			"offsets": [
-				-11,
-				-1
+				-33,
+				19
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "right"
 		},
 		{
 			"offsets": [
-				71,
-				10
+				173,
+				37
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "left"
 		},
 		{
 			"offsets": [
-				3,
-				-156
+				-75,
+				-86
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "down"
 		},
 		{
 			"offsets": [
-				57,
-				35
+				29,
+				37
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "up"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/knuckles",
+	"image": "characters/exe eggman",
 	"position": [
-		-50,
-		40
+		10,
+		80
 	],
-	"healthicon": "knuckles",
+	"healthicon": "eggmanexe",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		51,
-		0
+		115,
+		115,
+		135
 	],
 	"camera_position": [
-		190,
-		50
+		140,
+		-30
 	],
 	"sing_duration": 6.1,
-	"scale": 0.6
+	"scale": 1.1
 }
