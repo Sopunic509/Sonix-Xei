@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="give up exe bf.png">
+	<!-- Created with Adobe Animate version 20.5.0.29329 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="escape0000" x="0" y="0" width="1228" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0001" x="1228" y="0" width="1193" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0002" x="2421" y="0" width="1193" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0003" x="3614" y="0" width="1191" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0004" x="4805" y="0" width="1191" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0005" x="5996" y="0" width="1142" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0006" x="0" y="597" width="1142" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0007" x="1142" y="597" width="1143" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0008" x="2285" y="597" width="1143" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0009" x="3428" y="597" width="1193" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0010" x="4621" y="597" width="1193" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0011" x="5814" y="597" width="1196" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0012" x="0" y="1194" width="1196" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0013" x="1196" y="1194" width="1229" height="597"/>
+	<SubTexture name="escape0014" x="2425" y="1194" width="1229" height="597"/>
+	<SubTexture name="escape0015" x="3654" y="1194" width="1228" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0016" x="4882" y="1194" width="1228" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0017" x="6110" y="1194" width="1193" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0018" x="0" y="1791" width="1193" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0019" x="1193" y="1791" width="1191" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0020" x="2384" y="1791" width="1191" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0021" x="3575" y="1791" width="1142" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0022" x="4717" y="1791" width="1142" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0023" x="5859" y="1791" width="1143" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0024" x="7002" y="1791" width="1143" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0025" x="0" y="2388" width="1193" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0026" x="1193" y="2388" width="1193" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0027" x="2386" y="2388" width="1196" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0028" x="3582" y="2388" width="1196" height="597" frameX="0" frameY="0" frameWidth="1229" frameHeight="597"/>
+	<SubTexture name="escape0029" x="4778" y="2388" width="1229" height="597"/>
+	<SubTexture name="give up0000" x="6007" y="2388" width="1251" height="601" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0001" x="0" y="2989" width="1250" height="601" frameX="-1" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0002" x="1250" y="2989" width="1216" height="602" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0003" x="1250" y="2989" width="1216" height="602" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0004" x="2466" y="2989" width="1214" height="601" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0005" x="2466" y="2989" width="1214" height="601" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0006" x="3680" y="2989" width="1164" height="601" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0007" x="3680" y="2989" width="1164" height="601" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0008" x="4844" y="2989" width="1165" height="602" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0009" x="6009" y="2989" width="1164" height="602" frameX="-1" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0010" x="0" y="3591" width="1216" height="602" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0011" x="0" y="3591" width="1216" height="602" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0012" x="1216" y="3591" width="1218" height="601" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0013" x="1216" y="3591" width="1218" height="601" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0014" x="2434" y="3591" width="1252" height="601" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+	<SubTexture name="give up0015" x="2434" y="3591" width="1252" height="601" frameX="0" frameY="0" frameWidth="1252" frameHeight="602"/>
+</TextureAtlas>
