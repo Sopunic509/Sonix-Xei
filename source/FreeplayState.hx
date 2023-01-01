@@ -112,7 +112,7 @@ class FreeplayState extends MusicBeatState
 
 		for (i in 0...songs.length)
 		{
-			var songText:Alphabet = new Alphabet(90, -50, songs[i].songName, true);
+			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false);
 			songText.isMenuItem = true;
 			songText.targetY = i - curSelected;
 			grpSongs.add(songText);
@@ -155,6 +155,11 @@ class FreeplayState extends MusicBeatState
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
 		logo.setGraphicSize(Std.int(logo.width * 0.7));
 		add(logo);
+		
+		var letexte:FlxText = new FlxText(12, FlxG.height - 56, 0, "Press up and down to switch songs.", 18);
+		letexte.scrollFactor.set();
+		letexte.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		add(letexte);
 
 		if(curSelected >= songs.length) curSelected = 0;
 		
